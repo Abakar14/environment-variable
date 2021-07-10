@@ -4,6 +4,8 @@ server:
 spring:
   profiles:
     active: default
+  cloud:
+    enabled: true  
  
 #jasypt key
 jasypt:
