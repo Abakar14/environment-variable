@@ -2,6 +2,8 @@ server:
  port: 8081
 #spring boot configuration
 spring:
+  application:
+    name: licensingservice
   profiles:
     active: default
   cloud:
