@@ -7,7 +7,15 @@ spring:
   profiles:
     active: default
   cloud:
-    enabled: true  
+    config:
+      enabled: true
+eureka:
+  client:
+    enabled: true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url: 
+       defaultZone: http://localhost:8761/   
  
 #jasypt key
 jasypt:
