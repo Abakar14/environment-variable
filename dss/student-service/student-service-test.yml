@@ -22,9 +22,9 @@ spring:
   application:
     name: student-service
 #this config for configration servive
- # config:
- #   import:
-  #    optional:configserver:http//localhost:8888    
+  config:
+    import:
+      optional:configserver:http//localhost:8888    
     
 #Database properties
   datasource:
