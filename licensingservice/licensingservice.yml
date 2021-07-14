@@ -23,8 +23,8 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/microserviceInAction?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-    username: ENC(RZzH8EgilFdzjls3ONpkoQ==)
-    password: ENC(3ab/sq5Oy3CcyMhRPyu9hQG5NRa5vTA6)
+    username: ENC(+5T22OvbBLKb/KG8YQIGzTwM67NMna9N)
+    password: ENC(N3h2iD4mZBYXWjTqhAcjlUd78cwpYw6M)
 
 
 #JPA
