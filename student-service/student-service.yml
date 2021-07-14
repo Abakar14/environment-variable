@@ -17,12 +17,10 @@ management:
     refresh:
       enabled: true 
            
-#test profile
-spring:
-  application:
-    name: student-service
+
 
 #Database properties
+spring:
   datasource:
     url: jdbc:mysql://localhost:3306/bytmasoft?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: ENC(gSLMgo8n3pLQfYrEzFQP6Q==)
