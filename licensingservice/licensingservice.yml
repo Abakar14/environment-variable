@@ -30,8 +30,8 @@ example:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/microserviceInAction?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-    username: ENC(jxnoq5X3grqR6ZtQBQIejbHmNufNKAE/)
-    password: ENC(ADEPnfj6jdl2kPsl/Kjb8WLShNRAy4be) 
+    username: abakar
+    password: Aba14mah?
 
 
 #JPA
