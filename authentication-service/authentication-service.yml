@@ -2,7 +2,7 @@
 server:
   servlet:
     context-path: /dss/api/v1  
-  port: 8082
+  port: 8081
   
 #jasypt key
 jasypt:
