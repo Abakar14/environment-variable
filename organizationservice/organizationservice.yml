@@ -1,32 +1,8 @@
 server: 
  port: 8082
 #spring boot configuration
-spring:
-  application:
-    name: organizationservice
-  profiles:
-    active: default
-  cloud:
-    config:
-      enabled: true
-eureka:
-  client:
-    enabled: true
-    register-with-eureka: true
-    fetch-registry: true
-    service-url: 
-       defaultZone: http://localhost:8761/eureka/     
-  instance:
-    prefer-ip-address: true        
-      
-#jasypt key
-jasypt:
-  encryptor:
-    algorithm: PBEWithMD5AndDES
-    iv-generator-classname: org.jasypt.iv.NoIvGenerator
-    password: microservice
-    
 #database   
+spring: 
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/microserviceInAction?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
@@ -45,6 +21,15 @@ jasypt:
     properties:
       dialect: org.hibernate.dialect.PostgreSQLDialect   
       validation-query: "select 1"
+      
+        
+#jasypt key
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+    password: microservice
+    
 # Logger configuration
 logging:
   pattern:
