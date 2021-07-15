@@ -1,32 +1,12 @@
 server: 
  port: 8081
-#spring boot configuration
-spring:
-  application:
-    name: licensingservice
-#  profiles:
-#    active: default
- # cloud:
- #   config:
- #     enabled: true
-#eureka:
-#  client:
-#    enabled: true
-#    register-with-eureka: true
-#    fetch-registry: true
-#    service-url: 
-#       defaultZone: http://localhost:8761/eureka/   
- 
-
-#Application properties
 #database   
+spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/microserviceInAction?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: ENC(8Ssw28bO6cOTkwx+ZYFg9fxlC2lD9yZ0)
     password: ENC(N3h2iD4mZBYXWjTqhAcjlUd78cwpYw6M)
-
-
 #JPA
   jpa:
     hibernate:
@@ -44,8 +24,8 @@ logging:
   pattern:
     console: "%d %-5level %logger : %msg%n"
   level:
-    org.springframework: info
-    org.hibernate: debug
+   '[org.springframework]': info
+   '[org.hibernate]': debug 
 #jasypt key
 jasypt:
   encryptor:
