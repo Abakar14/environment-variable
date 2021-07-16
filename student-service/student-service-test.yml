@@ -1,7 +1,7 @@
 #server config           
 server:
   servlet:
-    context-path: /um/api/v1
+    context-path: /dss/api/v1
   
   port: 8083
 #test profile
