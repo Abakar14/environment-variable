@@ -64,4 +64,15 @@ logging:
     #'[org.hibernate.type]': TRACE
     '[org.hibernate.type.descriptor.sql]': TRACE
       
-
+service:
+ student:
+  url: http://student-service/dss/api/v1
+  
+ teacher:
+  url: http://teacher-service/dss/api/v1
+  
+ address:
+  url: http://address-service/dss/api/v1
+ 
+ employee:
+  url: http://employee-service/dss/api/v1
