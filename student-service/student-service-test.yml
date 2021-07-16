@@ -1,1 +1,80 @@
-ddd
+#server config           
+server:
+  servlet:
+    context-path: /um/api/v1
+  
+  port: 8083
+#test profile
+spring:
+  application:
+    name: student-service
+
+#Disable discovery
+  cloud:
+    loadbalancer:
+     ribbon:
+      enabled: false
+    discovery:
+     enabled: false 
+#Disable cloud config and config discovery
+  eureka:
+   client:
+    enabled: false   
+     
+#Database properties
+  datasource:
+    url: jdbc:h2:mem:test
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+    
+#Hibernate Properties 
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+  
+        
+#generate-ddl: true        
+    show-sql: true
+    properties:
+     hibernate:   
+      dialect: org.hibernate.dialect.H2Dialect
+      
+   
+#Logging properties
+logging:
+  level:
+    root: INFO   
+    '[org.springframework.web]': DEBUG
+    '[org.springframework.security]': INFO
+    '[org.hibernate.sql]': DEBUG
+    #'[org.hibernate.type]': TRACE
+    '[org.hibernate.type.descriptor.sql]': TRACE
+    
+#Application propterties
+dss:
+  date:
+   format: yyyy-MM-dd HH:mm:ss
+
+
+##Security
+jwt:
+ secret: bytmasoft4322333841D8A6C8C18C53B
+ token:
+  lifetime: 180000
+
+#microservices addresses
+ microservice:
+  name: messaging-service
+  address: http://localhost:8086/um/api/v1/messages
+      
+
+
+
+
+
+
+
