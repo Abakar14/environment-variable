@@ -3,6 +3,13 @@ server:
   servlet:
     context-path: /dss/api/v1  
   port: 8083
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    appname: address-service  
+    
   
 #jasypt key
 jasypt:
@@ -10,6 +17,7 @@ jasypt:
     algorithm: PBEWithMD5AndDES
     iv-generator-classname: org.jasypt.iv.NoIvGenerator
     password: dss2021
+    
 
 #used to enable /refresh endpoint, to demonstrate dynamic configuration changes.
 management:
@@ -62,6 +70,4 @@ logging:
     '[org.springframework.security]': INFO
     '[org.hibernate.sql]': DEBUG
     #'[org.hibernate.type]': TRACE
-    '[org.hibernate.type.descriptor.sql]': TRACE
-      
-
+    '[org.hibernate.type.descriptor.sql]': TRACE  
